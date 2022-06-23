@@ -40,7 +40,7 @@ export const ListOfTodo = () => {
 
     useEffect(() => {
         if (isDoneFilter === "") {
-            setTableData(originalData)
+            setTableData([...originalData])
         } else if (isDoneFilter) {
             setTableData([...originalData].filter(item => item.isDone))
         } else {
